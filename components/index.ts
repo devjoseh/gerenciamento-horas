@@ -26,6 +26,7 @@ export * from "./ui/card";
 export * from "./ui/checkbox";
 export * from "./ui/dialog";
 export * from "./ui/dropdown-menu";
+export * from "./ui/form-message";
 export * from "./ui/input";
 export * from "./ui/label";
 export * from "./ui/scroll-area";
