@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 
 const PROTECTED_ROUTES = ["/admin"];
-const PUBLIC_AUTH_ROUTES = ["/sign-in"];
+const PUBLIC_AUTH_ROUTES = ["/login"];
 const STATIC_ROUTES = ["/api", "/_next", "/favicon.ico"];
 
 export const updateSession = async (request: NextRequest) => {
@@ -60,7 +60,7 @@ export const updateSession = async (request: NextRequest) => {
 
         // Redirecionar usuários não autenticados de rotas protegidas
         if (isProtectedRoute && !isAuthenticated) {
-            const redirectUrl = new URL("/sign-in", request.url);
+            const redirectUrl = new URL("/login", request.url);
             // redirectUrl.searchParams.set("redirect", pathname); // Salvar onde o usuario queria ir
             return NextResponse.redirect(redirectUrl);
         }
