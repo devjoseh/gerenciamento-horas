@@ -1,11 +1,11 @@
 "use client";
 
 import { CreateTaskDialog, TaskFilters, TaskSection, TaskListView, OvertimeSummaryCard, ReportsDashboard, AreaSelector } from "@/components/index";
-import { Clock, TrendingUp, CheckCircle, Play, Grid, List, FileSpreadsheet } from "lucide-react";
+import { Clock, TrendingUp, CheckCircle, Play, Grid, List, FileSpreadsheet, LogOut } from "lucide-react";
 import { Button, Badge, Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/index";
 import type { TaskWithTimeEntries } from "@/utils/supabase/types";
+import { getTasks, signOut } from "@/utils/actions";
 import { useState, useEffect } from "react";
-import { getTasks } from "@/utils/actions";
 import { formatTime } from "@/lib/utils";
 
 export default function HomePage() {
@@ -19,6 +19,10 @@ export default function HomePage() {
     const [selectedAreaId, setSelectedAreaId] = useState<string | null>(null);
     const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
     const [activeTab, setActiveTab] = useState("tasks");
+
+    const handleLogout = async () => {
+        await signOut();
+    };
 
     const loadTasks = async () => {
         try {
@@ -99,10 +103,19 @@ export default function HomePage() {
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="container mx-auto px-4 py-8">
-                <div className="mb-8">
-                    <h1 className="text-3xl font-bold text-gray-900 mb-2">
+                <div className="mb-8 flex justify-between items-center">
+                    <h1 className="text-3xl font-bold text-gray-900">
                         Controle de Tempo
                     </h1>
+
+                    <Button
+                        variant="outline"
+                        className="border-red-600 hover:bg-red-600 hover:text-white"
+                        onClick={handleLogout}
+                    >
+                        <LogOut className="w-4 h-4 mr-2" />
+                        Desconectar
+                    </Button>
                 </div>
 
                 {/* Area Selector */}
