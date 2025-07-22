@@ -12,5 +12,4 @@ export * from "./ui/select";
 export * from "./ui/submit-button";
 export * from "./ui/switch";
 export * from "./ui/tabs";
-export * from "./ui/terminal";
 export * from "./ui/textarea";

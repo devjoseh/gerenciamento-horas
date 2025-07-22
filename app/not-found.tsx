@@ -53,29 +53,8 @@ export default function NotFound() {
                                 Voltar
                             </Button>
                         </div>
-
-                        {/* Fun Element */}
-                        <div className="mt-8 pt-6 border-t border-gray-200">
-                            <p className="text-sm text-gray-500 italic">
-                                &quot; O tempo perdido nunca se recupera, mas você
-                                pode recuperar o caminho! &quot;⏰
-                            </p>
-                        </div>
                     </CardContent>
                 </Card>
-
-                {/* Additional Help */}
-                <div className="mt-6 text-sm text-gray-500">
-                    <p>
-                        Precisa de ajuda? Entre em contato conosco ou{" "}
-                        <Link
-                            href="/"
-                            className="text-blue-600 hover:text-blue-800 underline"
-                        >
-                            volte ao controle de tempo
-                        </Link>
-                    </p>
-                </div>
             </div>
         </div>
     );
