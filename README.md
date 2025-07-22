@@ -4,9 +4,17 @@ O Gerenciamento de Horas é uma aplicação web desenvolvida para facilitar o re
 
 ## Funcionalidades
 
+- **Autenticação de Usuários:** Sistema seguro de login para proteger os dados dos usuários.
 - **Gerenciamento de Tarefas:** Crie, edite e visualize tarefas de forma simples e rápida.
 - **Controle de Sessões:** Inicie e pare sessões de trabalho para registrar o tempo dedicado a cada tarefa.
+- **Painel Administrativo:** Área exclusiva para administradores com funcionalidades de gerenciamento de áreas e equipes.
 - **Geração de Relatórios:** Ferramenta para extrair dados detalhados sobre as horas trabalhadas, ideal para análise de produtividade e faturamento.
+
+## Screenshots
+
+![Screenshot 1](./public/screenshot_1.png)
+![Screenshot 2](./public/screenshot_2.png)
+
 
 ## Tecnologias Utilizadas
 
